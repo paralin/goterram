@@ -1,0 +1,3 @@
+package: github.com/fuserobotics/goterram
+import:
+- package: github.com/fuserobotics/gogame
