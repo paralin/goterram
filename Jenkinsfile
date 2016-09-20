@@ -1,5 +1,4 @@
 node {
-  env.USER="root"
   stage ("node v6") {
     sh '. /root/.bashrc && set +x && nvm install 6'
   }
