@@ -1,6 +1,11 @@
 node {
   stage ("node v6") {
-    sh '. /root/.bashrc && set +x && nvm install 6'
+    sh '''
+      #!/bin/bash
+      set +x
+      source ~/.nvm/nvm.sh
+      nvm install 6
+    '''
   }
 
   stage ("scm") {
@@ -19,7 +24,7 @@ node {
     stage ("js") {
       sh '''
         #!/bin/bash
-        . ./scripts/jenkins_env.bash
+        source ./scripts/jenkins_env.bash
         ./scripts/build_js.bash
         pushd js && npm run semantic-release || true && popd
       '''
