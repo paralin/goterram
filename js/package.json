@@ -1,0 +1,29 @@
+{
+  "name": "@fusebot/goterram",
+  "description": "Go implementation of the Terram game logic.",
+  "main": "goterram.js",
+  "scripts": {
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "postpublish": "greenkeeper-postpublish"
+  },
+  "devDependencies": {
+    "greenkeeper-postpublish": "^1.0.1",
+    "semantic-release": "^4.3.5"
+  },
+  "dependencies": {
+    "greenkeeper-postpublish": "^1.0.1",
+    "semantic-release": "^4.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuserobotics/goterram.git"
+  },
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/fuserobotics/goterram/issues"
+  },
+  "homepage": "https://github.com/fuserobotics/goterram#readme",
+  "release": {
+    "verifyConditions": "./release_check"
+  }
+}
