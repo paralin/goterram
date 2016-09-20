@@ -6,9 +6,9 @@ module.exports = function(pluginConfig, config, cb) {
     return cb(new SRError('not running on Jenkins, so a new version won\'t be published.', 'ENOJENKINS'));
   }
 
-  var branch = env.GIT_BRANCH;
-  if (branch !== "origin/master") {
-    return cb(new SRError('branch is ' + branch + ', not publishing.', 'ENOMASTER'));
+  var should_release = env.JENKINS_SHOULD_RELEASE;
+  if (should_release !== "ismaster") {
+    return cb(new SRError('branch isn\'t master, not publishing.', 'ENOMASTER'));
   }
 
   cb(null);
