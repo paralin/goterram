@@ -1,12 +1,14 @@
-hash: bab1455325a9b4619e6336a03a877fefbd426b6e756633d1495c2b639dfa1fab
-updated: 2016-09-20T01:20:20.313190449-04:00
+hash: 6da10259ab50dc2c07db9cad089dc52ab6abdb1f10fd5a64ca4e886bb7234c11
+updated: 2016-09-20T02:32:56.697354004-04:00
 imports:
 - name: github.com/fuserobotics/gogame
-  version: eaa75f62099862687fc526f27a49a0bf8253bead
+  version: a839a514775126998fa3d63ec1f79ea034e00aa8
 - name: github.com/gogo/protobuf
-  version: 82d16f734d6d871204a3feb1a73cb220cc92574c
+  version: a31fa025390fe54d2af14a04199ed08dea5dc2fd
   subpackages:
-  - gogoproto
   - proto
-  - protoc-gen-gogo/descriptor
+- name: github.com/golang/protobuf
+  version: 1f49d83d9aa00e6ce4fc8258c71cc7786aec968a
+  subpackages:
+  - proto
 testImports: []

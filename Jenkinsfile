@@ -13,6 +13,7 @@ node {
         #!/bin/bash
         . /root/.bashrc
         git config --global url."https://${GITHUB_TOKEN}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
+        go get -u -v github.com/gopherjs/gopherjs
         glide install
       '''
     }
