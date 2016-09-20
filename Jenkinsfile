@@ -1,4 +1,5 @@
 node {
+  env.USER="root"
   stage ("node v6") {
     sh '. /root/.bashrc && set +x && nvm install 6'
   }
@@ -11,10 +12,16 @@ node {
     stage ("deps") {
       sh '''
         #!/bin/bash
-        . /root/.bashrc
-        git config --global url."https://${GITHUB_TOKEN}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
-        go get -u -v github.com/gopherjs/gopherjs
-        glide install
+        ./scripts/jenkins_setup_deps.bash
+      '''
+    }
+
+    stage ("js") {
+      sh '''
+        #!/bin/bash
+        . ./scripts/jenkins_env.bash
+        ./scripts/build_js.bash
+        pushd js && npm run semantic-release || true && popd
       '''
     }
   }
