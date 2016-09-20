@@ -9,7 +9,6 @@ mkdir -p ./goworkspace/src/github.com/fuserobotics
 ln -fs $(pwd) ./goworkspace/src/github.com/fuserobotics/goterram
 
 pushd ${GOPATH}/src/github.com/fuserobotics/goterram
-env
 glide install
 go get -u -v github.com/gopherjs/gopherjs
 popd

@@ -26,6 +26,7 @@ node {
         #!/bin/bash
         source ./scripts/jenkins_env.bash
         ./scripts/build_js.bash
+        ./scripts/jenkins_release.bash
         pushd js && npm run semantic-release || true && popd
       '''
     }
