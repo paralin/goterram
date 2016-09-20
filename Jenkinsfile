@@ -5,6 +5,7 @@ node {
 
   stage ("scm") {
     checkout scm
+    sh './scripts/jenkins_setup_git.bash'
   }
 
   wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'XTerm']) {
