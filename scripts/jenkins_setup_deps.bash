@@ -14,5 +14,7 @@ go get -u -v github.com/gopherjs/gopherjs
 popd
 
 # NPM deps
+enable-npm-proxy || true
 NODE_ENV='dev' npm install
+npm prune
 set -x

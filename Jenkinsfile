@@ -18,6 +18,7 @@ node {
     stage ("cache-get") {
       sh '''
         #!/bin/bash
+        source ./scripts/jenkins_env.bash
         ./scripts/init_cache.bash
       '''
     }
@@ -32,6 +33,7 @@ node {
     stage ("cache-put") {
       sh '''
         #!/bin/bash
+        source ./scripts/jenkins_env.bash
         ./scripts/finalize_cache.bash
       '''
     }
