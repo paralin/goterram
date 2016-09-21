@@ -8,6 +8,7 @@
     "build:go": "./scripts/build_js.bash"
   },
   "devDependencies": {
+    "@fusebot/jenkins-publish-condition": "^0.1.0",
     "cz-conventional-changelog": "^1.2.0",
     "greenkeeper-postpublish": "^1.0.1",
     "semantic-release": "^4.3.5"
@@ -27,7 +28,7 @@
   "homepage": "https://github.com/fuserobotics/goterram#readme",
   "release": {
     "branch": "release",
-    "verifyConditions": "./release_check"
+    "verifyConditions": "@fusebot/jenkins-publish-condition"
   },
   "config": {
     "commitizen": {
