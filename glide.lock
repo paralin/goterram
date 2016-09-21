@@ -2,7 +2,7 @@ hash: 6da10259ab50dc2c07db9cad089dc52ab6abdb1f10fd5a64ca4e886bb7234c11
 updated: 2016-09-20T02:32:56.697354004-04:00
 imports:
 - name: github.com/fuserobotics/gogame
-  version: ec7f6bdf4fed8c74d74aa6b36d99cde2f0d83b20
+  version: 646ce1422639f563430108cdf3345ba4bb695496
 - name: github.com/gogo/protobuf
   version: a31fa025390fe54d2af14a04199ed08dea5dc2fd
   subpackages:
