@@ -11,7 +11,7 @@ if [ ! -f ./cache_hashes.txt ]; then
   exit 1
 fi
 
-if compare-cache ./node_modules | wc -l; then
+if compare-cache ./node_modules/; then
   echo "No changes, continuing without uploading cache."
   exit 0
 fi
