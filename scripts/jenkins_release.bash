@@ -8,8 +8,12 @@ else
   exit 0
 fi
 
-git checkout -f refs/remotes/origin/release
+set -x
+git remote -v
+git fetch origin --tags
+git checkout origin/release
 
 pushd js
+ln -fs $(pwd)/../.git ./.git
 npm run semantic-release || true
 popd
