@@ -14,8 +14,5 @@ go get -u -v github.com/gopherjs/gopherjs
 popd
 
 # NPM deps
-# npm install --unsafe-perm -g semantic-release-cli
-pushd js
 NODE_ENV='dev' npm install
-popd
 set -x

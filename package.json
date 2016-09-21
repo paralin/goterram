@@ -1,12 +1,14 @@
 {
   "name": "@fusebot/goterram",
   "description": "Go implementation of the Terram game logic.",
-  "main": "goterram.js",
+  "main": "js/goterram.js",
   "scripts": {
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "postpublish": "greenkeeper-postpublish"
+    "postpublish": "greenkeeper-postpublish",
+    "build:go": "./scripts/build_js.bash"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "^1.2.0",
     "greenkeeper-postpublish": "^1.0.1",
     "semantic-release": "^4.3.5"
   },
@@ -26,5 +28,10 @@
   "release": {
     "branch": "release",
     "verifyConditions": "./release_check"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

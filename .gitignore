@@ -1,3 +1,4 @@
 vendor/
 goworkspace/
 .glide/
+node_modules/
