@@ -13,7 +13,4 @@ git remote -v
 git fetch origin --tags
 git checkout origin/release
 
-pushd js
-ln -fs $(pwd)/../.git ./.git
 npm run semantic-release || true
-popd
