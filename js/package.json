@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/fuserobotics/goterram#readme",
   "release": {
+    "branch": "release",
     "verifyConditions": "./release_check"
   }
 }
