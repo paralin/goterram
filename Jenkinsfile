@@ -14,10 +14,25 @@ node {
   }
 
   wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'XTerm']) {
+    env.CACHE_CONTEXT="goterram"
+    stage ("cache-get") {
+      sh '''
+        #!/bin/bash
+        ./scripts/init_cache.bash
+      '''
+    }
+
     stage ("deps") {
       sh '''
         #!/bin/bash
         ./scripts/jenkins_setup_deps.bash
+      '''
+    }
+
+    stage ("cache-put") {
+      sh '''
+        #!/bin/bash
+        ./scripts/finalize_cache.bash
       '''
     }
 
