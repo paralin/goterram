@@ -8,9 +8,9 @@ import (
 )
 
 /* Build a terram game instance. */
-func BuildTerramGame() (*gogame.Game, error) {
+func BuildTerramGame(frontend gogame.Frontend) (*gogame.Game, error) {
 	componentTable := components.BuildTerramComponentTable()
 	gameRules := &game.TerramGameRules{}
 
-	return gogame.BuildGame(componentTable, gameRules)
+	return gogame.BuildGame(componentTable, gameRules, frontend)
 }
