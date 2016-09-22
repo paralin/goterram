@@ -1,5 +1,6 @@
 {
   "name": "@fusebot/goterram",
+  "version": "1.0.0",
   "description": "Go implementation of the Terram game logic.",
   "main": "js/goterram.js",
   "scripts": {
@@ -34,5 +35,11 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "files": [
+    "README.md",
+    "js/goterram.js",
+    "js/goterram.d.ts",
+    "js/goterram.js.map"
+  ]
 }

@@ -23,5 +23,6 @@ func (*TerramJsGlobal) BuildTerramGame(frontend *JsFrontend) *js.Object {
 }
 
 func main() {
-	js.Module.Set("exports", js.MakeWrapper(&TerramJsGlobal{}))
+	fmt.Println("Initing goterram module...")
+	js.Module.Get("exports").Set("TerramBuilder", js.MakeWrapper(&TerramJsGlobal{}))
 }

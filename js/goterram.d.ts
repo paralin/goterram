@@ -1,20 +1,19 @@
 declare module "@fusebot/goterram" {
-  let ITerramGame: any;
-  declare interface ITerramJsGlobal {
-    BuildTerramGame(frontend: IFrontend): ITerramGame;
+  export interface ITerramJsGlobal {
+    BuildTerramGame(frontend: IFrontend): any;
   }
 
-  declare interface INetEntity {
+  export interface INetEntity {
     id: Number;
     parent_id?: Number;
   }
 
-  declare interface IFrontendComponent {
+  export interface IFrontendComponent {
     init?(): void;
     destroy?(): void;
   }
 
-  declare interface IFrontendEntity {
+  export interface IFrontendEntity {
     // Called when entity is created, no components
     init?(): void;
     // Called when adding components
@@ -26,12 +25,12 @@ declare module "@fusebot/goterram" {
   }
 
   /* Frontend interface */
-  declare interface IFrontend {
+  export interface IFrontend {
     init?(): void;
     // Called when an entity is added.
     addEntity?(entity: INetEntity): IFrontendEntity | void;
     destroy?(): void;
   }
 
-  export = ITerramJsGlobal;
+  export var TerramBuilder: ITerramJsGlobal;
 }
