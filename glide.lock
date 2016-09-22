@@ -1,14 +1,14 @@
-hash: 6da10259ab50dc2c07db9cad089dc52ab6abdb1f10fd5a64ca4e886bb7234c11
-updated: 2016-09-20T02:32:56.697354004-04:00
+hash: 59aa94645dc1c6c692cc7e6b4aa79784fadc5c22938776081fd5e6538848a522
+updated: 2016-09-22T01:15:26.641509622-04:00
 imports:
 - name: github.com/fuserobotics/gogame
-  version: 646ce1422639f563430108cdf3345ba4bb695496
-- name: github.com/gogo/protobuf
-  version: a31fa025390fe54d2af14a04199ed08dea5dc2fd
-  subpackages:
-  - proto
+  version: efd4df5fc51f371c6eb33545a636498c5082a340
 - name: github.com/golang/protobuf
   version: 1f49d83d9aa00e6ce4fc8258c71cc7786aec968a
   subpackages:
   - proto
+- name: github.com/gopherjs/gopherjs
+  version: 7600e3d439bd24b1a637bb6b67e9936c7d8736b3
+  subpackages:
+  - js
 testImports: []
