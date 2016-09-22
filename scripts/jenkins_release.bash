@@ -11,6 +11,8 @@ fi
 set -x
 git remote -v
 git fetch origin --tags
-git checkout origin/release
+git fetch origin release --tags
+git branch -D release || true
+git checkout -b release origin/release
 
 npm run semantic-release || true
