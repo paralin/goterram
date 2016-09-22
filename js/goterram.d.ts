@@ -13,6 +13,10 @@ declare module "@fusebot/goterram" {
     destroy?(): void;
   }
 
+  export interface IFrontendComponentFactory {
+    new(ent: IFrontendEntity): IFrontendComponent;
+  }
+
   export interface IFrontendEntity {
     // Called when entity is created, no components
     init?(): void;
