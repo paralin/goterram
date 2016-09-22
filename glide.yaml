@@ -1,5 +1,4 @@
 package: github.com/fuserobotics/goterram
 import:
 - package: github.com/fuserobotics/gogame
-- package: github.com/gogo/protobuf
 - package: github.com/golang/protobuf

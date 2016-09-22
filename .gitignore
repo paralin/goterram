@@ -1,3 +1,5 @@
 vendor/
 goworkspace/
 .glide/
+node_modules/
+cache_hashes.txt

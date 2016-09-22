@@ -8,14 +8,13 @@ mkdir -p ./goworkspace/bin
 mkdir -p ./goworkspace/src/github.com/fuserobotics
 ln -fs $(pwd) ./goworkspace/src/github.com/fuserobotics/goterram
 
-pushd ${GOPATH}/src/github.com/fuserobotics/goterram
-glide install
 go get -u -v github.com/gopherjs/gopherjs
+pushd ./goworkspace/src/github.com/fuserobotics/goterram
+go get -v ./js/
 popd
 
 # NPM deps
-# npm install --unsafe-perm -g semantic-release-cli
-pushd js
+enable-npm-proxy || true
 NODE_ENV='dev' npm install
-popd
+npm prune
 set -x
