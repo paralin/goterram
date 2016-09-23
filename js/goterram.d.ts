@@ -33,6 +33,8 @@ declare module "@fusebot/goterram" {
     REMOTE,
   }
 
+  export var EGameOperatingModeString: { [id: number]: string };
+
   export interface IFrontendGameRules {
     init?(): void;
     setGameOperatingMode?(op_mode: EGameOperatingMode);

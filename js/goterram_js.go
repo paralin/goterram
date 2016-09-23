@@ -28,4 +28,5 @@ func main() {
 	exports := js.Module.Get("exports")
 	exports.Set("TerramBuilder", js.MakeWrapper(&TerramJsGlobal{}))
 	exports.Set("EGameOperatingMode", gogame.GameOperatingMode_value)
+	exports.Set("EGameOperatingModeString", gogame.GameOperatingMode_name)
 }
