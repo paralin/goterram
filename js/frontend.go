@@ -10,11 +10,15 @@ type JsFrontend struct {
 	*js.Object
 }
 
-func (fe *JsFrontend) Init() {
+func (fe *JsFrontend) Init() gogame.FrontendGameRules {
 	if fe.Object.Get("init") == nil {
-		return
+		return nil
 	}
-	fe.Object.Call("init")
+	fegr := fe.Object.Call("init")
+	if fegr != nil {
+		return &JsFrontendGameRules{Object: fegr}
+	}
+	return nil
 }
 
 func (fe *JsFrontend) AddEntity(entity *gogame.Entity) gogame.FrontendEntity {

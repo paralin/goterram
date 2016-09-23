@@ -28,9 +28,20 @@ declare module "@fusebot/goterram" {
     destroy?(): void;
   }
 
+  export enum EGameOperatingMode {
+    Local = 0,
+    Remote,
+  }
+
+  export interface IFrontendGameRules {
+    init?(): void;
+    setGameOperatingMode?(op_mode: EGameOperatingMode);
+    destroy?(): void;
+  }
+
   /* Frontend interface */
   export interface IFrontend {
-    init?(): void;
+    init?(): IFrontendGameRules | void;
     // Called when an entity is added.
     addEntity?(entity: INetEntity): IFrontendEntity | void;
     destroy?(): void;
