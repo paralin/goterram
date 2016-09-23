@@ -12,5 +12,5 @@ func BuildTerramGame(frontend gogame.Frontend) (*gogame.Game, error) {
 	componentTable := components.BuildTerramComponentTable()
 	gameRules := &game.TerramGameRules{}
 
-	return gogame.BuildGame(componentTable, gameRules, frontend)
+	return gogame.BuildGame(game.TerramSettings, componentTable, gameRules, frontend)
 }

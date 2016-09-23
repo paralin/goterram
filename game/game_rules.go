@@ -2,6 +2,11 @@ package game
 
 import "github.com/fuserobotics/gogame"
 
+// Main game tick rate in Hz
+var TerramSettings gogame.GameSettings = gogame.GameSettings{
+	Tick: 30,
+}
+
 type TerramGameRules struct {
 	Game *gogame.Game
 
