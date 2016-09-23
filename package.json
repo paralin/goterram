@@ -1,6 +1,5 @@
 {
   "name": "@fusebot/goterram",
-  "version": "1.0.0",
   "description": "Go implementation of the Terram game logic.",
   "main": "js/goterram.js",
   "scripts": {
