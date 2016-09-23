@@ -9,14 +9,14 @@ type JsFrontendComponent struct {
 }
 
 func (fc *JsFrontendComponent) Init() {
-	if fc.Object.Get("init") == nil {
+	if fc.Object.Get("init") == js.Undefined {
 		return
 	}
 	fc.Object.Call("init")
 }
 
 func (fc *JsFrontendComponent) Destroy() {
-	if fc.Object.Get("destroy") == nil {
+	if fc.Object.Get("destroy") == js.Undefined {
 		return
 	}
 	fc.Object.Call("destroy")

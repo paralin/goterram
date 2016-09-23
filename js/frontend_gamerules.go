@@ -11,21 +11,21 @@ type JsFrontendGameRules struct {
 }
 
 func (fe *JsFrontendGameRules) Init() {
-	if fe.Object.Get("init") == nil {
+	if fe.Object.Get("init") == js.Undefined {
 		return
 	}
 	fe.Object.Call("init")
 }
 
 func (fe *JsFrontendGameRules) SetGameOperatingMode(opMode gogame.GameOperatingMode) {
-	if fe.Object.Get("setGameOperatingMode") == nil {
+	if fe.Object.Get("setGameOperatingMode") == js.Undefined {
 		return
 	}
 	fe.Object.Call("setGameOperatingMode", opMode)
 }
 
 func (fe *JsFrontendGameRules) Destroy() {
-	if fe.Object.Get("destroy") == nil {
+	if fe.Object.Get("destroy") == js.Undefined {
 		return
 	}
 	fe.Object.Call("destroy")

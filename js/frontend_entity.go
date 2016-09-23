@@ -10,32 +10,32 @@ type JsFrontendEntity struct {
 }
 
 func (fe *JsFrontendEntity) Init() {
-	if fe.Object.Get("init") == nil {
+	if fe.Object.Get("init") == js.Undefined {
 		return
 	}
 	fe.Object.Call("init")
 }
 
 func (fe *JsFrontendEntity) AddComponent(id uint32) gogame.FrontendComponent {
-	if fe.Object.Get("addComponent") == nil {
+	if fe.Object.Get("addComponent") == js.Undefined {
 		return nil
 	}
 	res := fe.Object.Call("addComponent", id)
-	if res == nil {
+	if res == nil || res == js.Undefined {
 		return nil
 	}
 	return &JsFrontendComponent{Object: res}
 }
 
 func (fe *JsFrontendEntity) InitLate() {
-	if fe.Object.Get("initLate") == nil {
+	if fe.Object.Get("initLate") == js.Undefined {
 		return
 	}
 	fe.Object.Call("initLate")
 }
 
 func (fe *JsFrontendEntity) Destroy() {
-	if fe.Object.Get("destroy") == nil {
+	if fe.Object.Get("destroy") == js.Undefined {
 		return
 	}
 	fe.Object.Call("destroy")

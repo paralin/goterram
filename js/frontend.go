@@ -33,7 +33,7 @@ func (fe *JsFrontend) AddEntity(entity *gogame.Entity) gogame.FrontendEntity {
 }
 
 func (fe *JsFrontend) Destroy() {
-	if fe.Object.Get("destroy") == nil {
+	if fe.Object.Get("destroy") == js.Undefined {
 		return
 	}
 	fe.Object.Call("destroy")
