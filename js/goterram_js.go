@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/fuserobotics/gogame"
 	"github.com/fuserobotics/goterram/factory"
 	"github.com/gopherjs/gopherjs/js"
 )
@@ -24,5 +25,7 @@ func (*TerramJsGlobal) BuildTerramGame(frontend *JsFrontend) *js.Object {
 
 func main() {
 	fmt.Println("Initing goterram module...")
-	js.Module.Get("exports").Set("TerramBuilder", js.MakeWrapper(&TerramJsGlobal{}))
+	exports := js.Module.Get("exports")
+	exports.Set("TerramBuilder", js.MakeWrapper(&TerramJsGlobal{}))
+	exports.Set("EGameOperatingMode", gogame.GameOperatingMode_value)
 }

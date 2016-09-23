@@ -29,8 +29,8 @@ declare module "@fusebot/goterram" {
   }
 
   export enum EGameOperatingMode {
-    Local = 0,
-    Remote,
+    LOCAL = 0,
+    REMOTE,
   }
 
   export interface IFrontendGameRules {
