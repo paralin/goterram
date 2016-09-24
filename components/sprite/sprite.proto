@@ -1,0 +1,9 @@
+syntax = "proto3";
+package sprite;
+
+message SpriteData {
+}
+
+message SpriteComponentInit {
+  SpriteData data = 1;
+}
