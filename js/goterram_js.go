@@ -3,14 +3,17 @@ package main
 import (
 	"fmt"
 
+	"github.com/fuserobotics/gogame"
+	fejs "github.com/fuserobotics/gogame/js"
 	"github.com/fuserobotics/goterram/factory"
+
 	"github.com/gopherjs/gopherjs/js"
 )
 
 type TerramJsGlobal struct {
 }
 
-func (*TerramJsGlobal) BuildTerramGame(frontend *JsFrontend) *js.Object {
+func (*TerramJsGlobal) BuildTerramGame(frontend *fejs.JsFrontend) *js.Object {
 	game, err := factory.BuildTerramGame(frontend)
 
 	if err != nil {
@@ -24,5 +27,8 @@ func (*TerramJsGlobal) BuildTerramGame(frontend *JsFrontend) *js.Object {
 
 func main() {
 	fmt.Println("Initing goterram module...")
-	js.Module.Get("exports").Set("TerramBuilder", js.MakeWrapper(&TerramJsGlobal{}))
+	exports := js.Module.Get("exports")
+	exports.Set("TerramBuilder", js.MakeWrapper(&TerramJsGlobal{}))
+	exports.Set("EGameOperatingMode", gogame.GameOperatingMode_value)
+	exports.Set("EGameOperatingModeString", gogame.GameOperatingMode_name)
 }

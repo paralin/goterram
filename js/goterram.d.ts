@@ -1,23 +1,29 @@
 declare module "@fusebot/goterram" {
+  export interface ITerramGame {
+    Start(): void;
+    Stop(): void;
+  }
+
   export interface ITerramJsGlobal {
-    BuildTerramGame(frontend: IFrontend): any;
+    BuildTerramGame(frontend: IFrontend): ITerramGame;
   }
 
   export interface INetEntity {
-    id: Number;
-    parent_id?: Number;
+    Id: Number;
+    ParentId?: Number;
   }
 
   export interface IFrontendComponent {
     init?(): void;
+    initLate?(): void;
+    update?(): void;
     destroy?(): void;
   }
 
-  export interface IFrontendComponentFactory {
-    new(ent: IFrontendEntity): IFrontendComponent;
-  }
-
   export interface IFrontendEntity {
+    // List of all components
+    components: { [id: number]: IFrontendComponent };
+
     // Called when entity is created, no components
     init?(): void;
     // Called when adding components
@@ -28,9 +34,22 @@ declare module "@fusebot/goterram" {
     destroy?(): void;
   }
 
+  export enum EGameOperatingMode {
+    LOCAL = 0,
+    REMOTE,
+  }
+
+  export var EGameOperatingModeString: { [id: number]: string };
+
+  export interface IFrontendGameRules {
+    init?(): void;
+    setGameOperatingMode?(op_mode: EGameOperatingMode);
+    destroy?(): void;
+  }
+
   /* Frontend interface */
   export interface IFrontend {
-    init?(): void;
+    init?(): IFrontendGameRules | void;
     // Called when an entity is added.
     addEntity?(entity: INetEntity): IFrontendEntity | void;
     destroy?(): void;
