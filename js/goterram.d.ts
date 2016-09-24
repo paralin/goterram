@@ -1,6 +1,11 @@
 declare module "@fusebot/goterram" {
+  export interface ITerramGame {
+    Start(): void;
+    Stop(): void;
+  }
+
   export interface ITerramJsGlobal {
-    BuildTerramGame(frontend: IFrontend): any;
+    BuildTerramGame(frontend: IFrontend): ITerramGame;
   }
 
   export interface INetEntity {
