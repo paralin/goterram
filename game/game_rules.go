@@ -19,6 +19,9 @@ func (gr *TerramGameRules) Init(game *gogame.Game) {
 	gr.opMode = gogame.GameOperatingMode_LOCAL
 }
 
+func (gr *TerramGameRules) Update() {
+}
+
 func (gr *TerramGameRules) SetGameOperatingMode(opMode gogame.GameOperatingMode) {
 	if opMode == gr.opMode {
 		return

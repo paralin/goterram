@@ -10,6 +10,8 @@ declare module "@fusebot/goterram" {
 
   export interface IFrontendComponent {
     init?(): void;
+    initLate?(): void;
+    update?(): void;
     destroy?(): void;
   }
 
