@@ -12,3 +12,5 @@ func BuildTerramComponentTable() gogame.ComponentTable {
 
 	return res
 }
+
+var TerramComponentTable gogame.ComponentTable = BuildTerramComponentTable()

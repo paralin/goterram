@@ -9,8 +9,8 @@ declare module "@fusebot/goterram" {
   }
 
   export interface INetEntity {
-    id: Number;
-    parent_id?: Number;
+    Id: Number;
+    ParentId?: Number;
   }
 
   export interface IFrontendComponent {
@@ -20,11 +20,10 @@ declare module "@fusebot/goterram" {
     destroy?(): void;
   }
 
-  export interface IFrontendComponentFactory {
-    new(ent: IFrontendEntity): IFrontendComponent;
-  }
-
   export interface IFrontendEntity {
+    // List of all components
+    components: { [id: number]: IFrontendComponent };
+
     // Called when entity is created, no components
     init?(): void;
     // Called when adding components

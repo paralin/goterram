@@ -1,6 +1,9 @@
 package game
 
-import "github.com/fuserobotics/gogame"
+import (
+	"github.com/fuserobotics/gogame"
+	"github.com/fuserobotics/goterram/entities"
+)
 
 // Main game tick rate in Hz
 var TerramSettings gogame.GameSettings = gogame.GameSettings{
@@ -12,6 +15,10 @@ type TerramGameRules struct {
 
 	// For use when detecting changes
 	opMode gogame.GameOperatingMode
+
+	// Testing
+	entIdCounter  uint32
+	hasSpawnedEnt bool
 }
 
 func (gr *TerramGameRules) Init(game *gogame.Game) {
@@ -20,6 +27,15 @@ func (gr *TerramGameRules) Init(game *gogame.Game) {
 }
 
 func (gr *TerramGameRules) Update() {
+	if !gr.hasSpawnedEnt {
+		gr.hasSpawnedEnt = true
+		gr.Game.SpawnEntity(entities.TerramEntityFactories.Ball, nil)
+	}
+}
+
+func (gr *TerramGameRules) NextEntityId() uint32 {
+	gr.entIdCounter++
+	return gr.entIdCounter
 }
 
 func (gr *TerramGameRules) SetGameOperatingMode(opMode gogame.GameOperatingMode) {
