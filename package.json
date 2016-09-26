@@ -15,8 +15,7 @@
     "rimraf": "^2.5.4",
     "semantic-release": "^4.3.5"
   },
-  "dependencies": {
-    "greenkeeper-postpublish": "^1.0.1",
+  "dependencies": { "greenkeeper-postpublish": "^1.0.1",
     "semantic-release": "^4.3.5"
   },
   "repository": {
@@ -39,9 +38,9 @@
   },
   "files": [
     "README.md",
-    "js/goterram.js",
-    "js/goterram.d.ts",
-    "js/goterram.js.map",
-    "gosources/**/*.go"
+    "./js/goterram.js",
+    "./js/goterram.d.ts",
+    "./js/goterram.js.map",
+    "./gosources/**/*.go"
   ]
 }
