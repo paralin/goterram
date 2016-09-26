@@ -1,7 +1,8 @@
 {
   "name": "@fusebot/goterram",
   "description": "Go implementation of the Terram game logic.",
-  "main": "js/goterram.js",
+  "main": "./js/goterram.js",
+  "types": "./js/goterram.d.ts",
   "scripts": {
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "postpublish": "greenkeeper-postpublish",
