@@ -28,6 +28,8 @@ declare module "@fusebot/goterram" {
     init?(): void;
     // Called when adding components
     addComponent?(component_id: number): IFrontendComponent | void;
+    // Retreive a component, called from sub-components
+    getComponent(component_id: number): IFrontendComponent;
     // Called when all components have been added.
     initLate?(): void;
     // Called when the entity is removed.

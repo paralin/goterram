@@ -16,12 +16,12 @@ type SpriteComponent struct {
 	Frontend gogame.FrontendComponent
 }
 
-// Initialize a brand new transform component
+// Initialize a brand new sprite component
 func (tc *SpriteComponent) Init(ent *gogame.Entity) {
 	tc.Entity = ent
 }
 
-// Initialize a remotely created transform component, over the network
+// Initialize a remotely created sprite component, over the network
 func (tc *SpriteComponent) InitWithData(ent *gogame.Entity, data []byte) {
 	tc.Entity = ent
 
