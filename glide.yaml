@@ -1,4 +1,4 @@
-package: github.com/fuserobotics/goterram
+package: github.com/paralin/goterram
 import:
-- package: github.com/fuserobotics/gogame
+- package: github.com/paralin/gogame
 - package: github.com/golang/protobuf

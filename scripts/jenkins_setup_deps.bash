@@ -5,11 +5,11 @@ set -e
 source ./scripts/jenkins_env.bash
 
 mkdir -p ./goworkspace/bin
-mkdir -p ./goworkspace/src/github.com/fuserobotics
-ln -fs $(pwd) ./goworkspace/src/github.com/fuserobotics/goterram
+mkdir -p ./goworkspace/src/github.com/paralin
+ln -fs $(pwd) ./goworkspace/src/github.com/paralin/goterram
 
 go get -u -v github.com/gopherjs/gopherjs
-pushd ./goworkspace/src/github.com/fuserobotics/goterram
+pushd ./goworkspace/src/github.com/paralin/goterram
 go get -v ./js/
 popd
 

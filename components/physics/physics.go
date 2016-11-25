@@ -3,14 +3,14 @@ package physics
 import (
 	"fmt"
 
-	"github.com/fuserobotics/gogame"
+	"github.com/paralin/gogame"
 	"github.com/golang/protobuf/proto"
 
 	"github.com/vova616/chipmunk"
 	"github.com/vova616/chipmunk/vect"
 
-	"github.com/fuserobotics/gogame/components/transform"
-	"github.com/fuserobotics/goterram/common"
+	"github.com/paralin/gogame/components/transform"
+	"github.com/paralin/goterram/common"
 )
 
 // terram components start at 1xx

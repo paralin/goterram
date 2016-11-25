@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/fuserobotics/goterram/factory"
+	"github.com/paralin/goterram/factory"
 )
 
 func main() {

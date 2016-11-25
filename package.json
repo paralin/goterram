@@ -20,13 +20,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fuserobotics/goterram.git"
+    "url": "git+https://github.com/paralin/goterram.git"
   },
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/fuserobotics/goterram/issues"
+    "url": "https://github.com/paralin/goterram/issues"
   },
-  "homepage": "https://github.com/fuserobotics/goterram#readme",
+  "homepage": "https://github.com/paralin/goterram#readme",
   "release": {
     "branch": "release",
     "verifyConditions": "@fusebot/jenkins-publish-condition"
