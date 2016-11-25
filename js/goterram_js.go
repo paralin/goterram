@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/fuserobotics/gogame"
-	fejs "github.com/fuserobotics/gogame/js"
-	"github.com/fuserobotics/goterram/factory"
+	"github.com/paralin/gogame"
+	fejs "github.com/paralin/gogame/js"
+	"github.com/paralin/goterram/factory"
 
 	"github.com/gopherjs/gopherjs/js"
 )

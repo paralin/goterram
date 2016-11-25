@@ -1,10 +1,10 @@
 package factory
 
 import (
-	"github.com/fuserobotics/gogame"
+	"github.com/paralin/gogame"
 
-	"github.com/fuserobotics/goterram/components"
-	"github.com/fuserobotics/goterram/game"
+	"github.com/paralin/goterram/components"
+	"github.com/paralin/goterram/game"
 )
 
 /* Build a terram game instance. */

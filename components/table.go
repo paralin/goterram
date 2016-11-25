@@ -1,11 +1,11 @@
 package components
 
 import (
-	"github.com/fuserobotics/gogame"
-	"github.com/fuserobotics/gogame/components"
+	"github.com/paralin/gogame"
+	"github.com/paralin/gogame/components"
 
-	"github.com/fuserobotics/goterram/components/physics"
-	"github.com/fuserobotics/goterram/components/sprite"
+	"github.com/paralin/goterram/components/physics"
+	"github.com/paralin/goterram/components/sprite"
 )
 
 func BuildTerramComponentTable() gogame.ComponentTable {

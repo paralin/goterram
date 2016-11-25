@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-go build -v -o ./.tmp.bin github.com/fuserobotics/goterram/js || true
+go build -v -o ./.tmp.bin github.com/paralin/goterram/js || true
 rm ./.tmp.bin || true
 pushd ./js
 gopherjs build --output=goterram.js

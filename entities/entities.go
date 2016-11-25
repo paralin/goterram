@@ -1,8 +1,8 @@
 package entities
 
 import (
-	"github.com/fuserobotics/gogame"
-	"github.com/fuserobotics/goterram/entities/ball"
+	"github.com/paralin/gogame"
+	"github.com/paralin/goterram/entities/ball"
 )
 
 var TerramEntityFactories = struct {

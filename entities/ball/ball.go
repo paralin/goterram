@@ -1,11 +1,11 @@
 package ball
 
 import (
-	"github.com/fuserobotics/gogame"
-	"github.com/fuserobotics/gogame/components/transform"
+	"github.com/paralin/gogame"
+	"github.com/paralin/gogame/components/transform"
 
-	"github.com/fuserobotics/goterram/components/physics"
-	"github.com/fuserobotics/goterram/components/sprite"
+	"github.com/paralin/goterram/components/physics"
+	"github.com/paralin/goterram/components/sprite"
 )
 
 type BallFactory struct {

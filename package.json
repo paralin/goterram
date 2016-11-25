@@ -15,19 +15,18 @@
     "rimraf": "^2.5.4",
     "semantic-release": "^4.3.5"
   },
-  "dependencies": {
-    "greenkeeper-postpublish": "^1.0.1",
+  "dependencies": { "greenkeeper-postpublish": "^1.0.1",
     "semantic-release": "^4.3.5"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fuserobotics/goterram.git"
+    "url": "git+https://github.com/paralin/goterram.git"
   },
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/fuserobotics/goterram/issues"
+    "url": "https://github.com/paralin/goterram/issues"
   },
-  "homepage": "https://github.com/fuserobotics/goterram#readme",
+  "homepage": "https://github.com/paralin/goterram#readme",
   "release": {
     "branch": "release",
     "verifyConditions": "@fusebot/jenkins-publish-condition"
@@ -39,9 +38,9 @@
   },
   "files": [
     "README.md",
-    "js/goterram.js",
-    "js/goterram.d.ts",
-    "js/goterram.js.map",
-    "gosources/**/*.go"
+    "./js/goterram.js",
+    "./js/goterram.d.ts",
+    "./js/goterram.js.map",
+    "./gosources/**/*.go"
   ]
 }

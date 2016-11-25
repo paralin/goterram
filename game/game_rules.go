@@ -3,9 +3,9 @@ package game
 import (
 	"fmt"
 
-	"github.com/fuserobotics/gogame"
-	"github.com/fuserobotics/goterram/common"
-	"github.com/fuserobotics/goterram/entities"
+	"github.com/paralin/gogame"
+	"github.com/paralin/goterram/common"
+	"github.com/paralin/goterram/entities"
 
 	"github.com/vova616/chipmunk"
 	"github.com/vova616/chipmunk/vect"
